@@ -1,0 +1,1 @@
+export { PaginationFavouriteDTO } from './favoutite.pagination';
