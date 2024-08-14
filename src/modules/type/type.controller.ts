@@ -1,24 +1,24 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post, UseGuards } from '@nestjs/common'
 
-import { GenresService } from './genres.service'
+import { TypeService } from './type.service'
 import { AuthGuard } from '../../guards/auth.guard'
 import { AdminGuard } from '../../guards/admin.guard'
 
-@Controller('genres')
-export class GenresController {
+@Controller('type')
+export class TypeController {
 
-    constructor(private readonly genresSerice: GenresService) { }
+    constructor(private readonly TypeService: TypeService) { }
 
     @Post('create')
     // @UseGuards(AuthGuard, AdminGuard)
-    async PostGenres(@Body('genres') genres: string) {
+    async PostType(@Body('type') type: string) {
         try {
-            if (!genres) {
-                throw new NotFoundException('No genres entered')
+            if (!type) {
+                throw new NotFoundException('No Type entered')
             }
-            const result = await this.genresSerice.CreateGenres(genres);
+            const result = await this.TypeService.CreateType(type);
             const response: Record<string, any> = {
-                Message: `Create genres ${result.name} successfully`,
+                Message: `Create Type ${result.name} successfully`,
             }
             return response;
         } catch (error) {
@@ -28,9 +28,9 @@ export class GenresController {
 
     @Delete('delete/:id')
     // @UseGuards(AuthGuard, AdminGuard)
-    async DeleteGenres(@Param('id') id: string) {
+    async DeleteType(@Param('id') id: string) {
         try {
-            await this.genresSerice.DeleteGenres(id)
+            await this.TypeService.DeleteType(id)
             const response: Record<string, any> = {
                 Message: 'Delete successfully',
             }
@@ -41,16 +41,16 @@ export class GenresController {
     }
 
     @Get('getall')
-    async GetAllGenres() {
+    async GetAllType() {
         try {
-            const genres: any = await this.genresSerice.FindAllGenres();
+            const Type: any = await this.TypeService.FindAllType();
             const response: Record<string, any> = {
                 "data": {
-                    "count": genres.length,
-                    "items": genres.map(genres => {
+                    "count": Type.length,
+                    "items": Type.map(Type => {
                         return {
-                            id: genres.id,
-                            category: genres.name
+                            id: Type.id,
+                            type: Type.name
                         }
                     })
                 }

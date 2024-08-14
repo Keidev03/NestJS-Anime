@@ -1,15 +1,27 @@
 import mongoose from "mongoose"
 
-export interface IRating {
-    userID: string,
-    animeID: string,
-    rating: number
+
+export interface IUserRating {
+    userID: string
+    point: number
 }
 
+export interface IRating {
+    id: mongoose.Types.ObjectId
+    animeID: mongoose.Types.ObjectId
+    rating: IUserRating[]
+    createAt: Date
+}
+
+const UserRatingSchema = new mongoose.Schema({
+    userID: { type: String, required: true },
+    point: { type: Number, required: true }
+});
+
 export const RatingSchema = new mongoose.Schema({
-    userID: { type: mongoose.Types.ObjectId, require: true },
     animeID: { type: mongoose.Types.ObjectId, require: true },
-    rating: { type: Number, require: true }
+    rating: [UserRatingSchema],
+    createAt: { type: Date, default: Date.now },
 })
 
-RatingSchema.index({ userID: 1, animeID: 1 });
+RatingSchema.index({ animeID: 1 });

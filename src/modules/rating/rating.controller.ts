@@ -1,6 +1,7 @@
-import { Body, Controller, Delete, Get, Param, Post, Req, UseGuards } from '@nestjs/common';
-import { RatingService } from './rating.service';
-import { AuthGuard } from 'src/guards/auth.guard';
+import { Body, Controller, Delete, Get, Param, Post, Req, UseGuards } from '@nestjs/common'
+
+import { RatingService } from './rating.service'
+import { AuthGuard } from '../../guards/auth.guard'
 
 @Controller('rating')
 export class RatingController {

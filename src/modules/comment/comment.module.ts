@@ -1,11 +1,13 @@
-import { Module } from '@nestjs/common';
-import { CommentController } from './comment.controller';
-import { CommentService } from './comment.service';
-import { MongooseModule } from '@nestjs/mongoose';
-import { CommentSchema } from './comment.schema';
+import { Module } from '@nestjs/common'
+import { MongooseModule } from '@nestjs/mongoose'
+
+import { CommentController } from './comment.controller'
+import { CommentService } from './comment.service'
+import { CommentSchema } from './comment.schema'
+import { AnimeModule } from '../anime/anime.module'
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: 'Comment', schema: CommentSchema }])],
+  imports: [MongooseModule.forFeature([{ name: 'Comment', schema: CommentSchema }]), AnimeModule],
   controllers: [CommentController],
   providers: [CommentService]
 })

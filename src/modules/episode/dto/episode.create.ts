@@ -15,22 +15,22 @@ export class CreateEpisodeDTO {
     duration: number;
 
     @IsNotEmpty()
-    @IsDateString()
+    @IsString()
     releaseDate: Date;
 
     @IsOptional()
     @IsString()
-    serverDrive: string
+    server1: string
 
     @IsOptional()
     @IsString()
-    serverHydrax: string
+    server2: string
 
     @IsOptional()
     @IsString()
-    serverHelvid: string
+    server3: string
 
     @IsOptional()
     @IsString()
-    serverDaily: string
+    server4: string
 }

@@ -26,7 +26,7 @@ export class UpdateAnimeDTO {
 
     @IsOptional()
     @IsString()
-    namePart: string;
+    type: string;
 
     @IsOptional()
     @IsDate()

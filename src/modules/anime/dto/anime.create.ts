@@ -12,11 +12,11 @@ export class CreateAnimeDTO {
 
     @IsNotEmpty()
     @IsArray()
-    genres: string[];
+    genres: number[];
 
     @IsNotEmpty()
     @IsString()
-    namePart: string;
+    type: string;
 
     @IsNotEmpty()
     @IsDate()

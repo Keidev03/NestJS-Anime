@@ -1,3 +1,4 @@
 export { CreateAnimeDTO } from './anime.create';
-export { PaginationAnimeDTO } from './anime.pagination';
+export { FindAnimeDTO } from './anime.find';
+export { SearchAnimeDTO } from './anime.search';
 export { UpdateAnimeDTO } from "./anime.update";

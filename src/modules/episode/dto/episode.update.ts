@@ -3,10 +3,6 @@ import { IsDateString, IsNumber, IsOptional, IsString } from 'class-validator';
 export class UpdateEpisodeDTO {
 
     @IsOptional()
-    @IsString()
-    animeID: string;
-
-    @IsOptional()
     @IsNumber()
     episode: number;
 
@@ -20,17 +16,17 @@ export class UpdateEpisodeDTO {
 
     @IsOptional()
     @IsString()
-    serverDrive: string
+    server1: string
 
     @IsOptional()
     @IsString()
-    serverHydrax: string
+    server2: string
 
     @IsOptional()
     @IsString()
-    serverHelvid: string
+    server3: string
 
     @IsOptional()
     @IsString()
-    serverDaily: string
+    server4: string
 }

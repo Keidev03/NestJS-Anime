@@ -1,6 +1,7 @@
-import { Body, Controller, Get, Param, Post, Put, Req, UseGuards } from '@nestjs/common';
-import { CommentService } from './comment.service';
-import { AuthGuard } from 'src/guards/auth.guard';
+import { Body, Controller, Get, Param, Post, Put, Req, UseGuards } from '@nestjs/common'
+
+import { CommentService } from './comment.service'
+import { AuthGuard } from '../../guards/auth.guard'
 
 @Controller('comment')
 export class CommentController {
@@ -38,16 +39,18 @@ export class CommentController {
     @Get('anime/:animeID')
     async GetCommentAnime(@Param('animeID') animeID: string) {
         try {
-            const results = await this.commentService.FindCommentAnime(animeID)
+            const results: any = await this.commentService.FindCommentAnime(animeID)
             const response: Record<string, any> = {
-                "count": results.length,
-                "data": results.map(result => {
-                    return {
-                        commentID: result.id,
-                        review: result.comment,
-                        time: result.commentTime
-                    }
-                })
+                "data": {
+                    "count": results.length,
+                    "items": results.map(result => {
+                        return {
+                            commentID: result.id,
+                            review: result.comment,
+                            time: result.commentTime
+                        }
+                    })
+                }
             }
             return response;
         } catch (error) {
@@ -58,16 +61,18 @@ export class CommentController {
     @Get('user')
     async GetCommentUser(@Req() req: any) {
         try {
-            const results = await this.commentService.FindCommentUser(req.user.id);
+            const results: any = await this.commentService.FindCommentUser(req.user.id);
             const response: Record<string, any> = {
-                "count": results.length,
-                "data": results.map(result => {
-                    return {
-                        commentID: result.id,
-                        review: result.comment,
-                        time: result.commentTime
-                    }
-                })
+                "data": {
+                    "count": results.length,
+                    "items": results.map(result => {
+                        return {
+                            commentID: result.id,
+                            review: result.comment,
+                            time: result.commentTime
+                        }
+                    })
+                }
             }
             return response;
         } catch (error) {
