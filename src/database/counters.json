@@ -1,0 +1,12 @@
+[
+       {
+              "_id": "typeID",
+              "__v": 0,
+              "sequence_value": 6
+       },
+       {
+              "_id": "genreID",
+              "__v": 0,
+              "sequence_value": 25
+       }
+]

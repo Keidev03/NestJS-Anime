@@ -12,33 +12,33 @@ export class FavouriteController {
     @Post('create/:animeID')
     async PostAnimeFavourite(@Req() req: any, @Param('animeID') animeID: Array<string>) {
         try {
-            await this.favouriteService.AddAnimeFavourite(req.user.id, animeID);
+            await this.favouriteService.AddAnimeFavourite(req.user.id, animeID)
             const response: Record<string, any> = {
                 Message: "Create successfully",
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
     @Delete('delete/:animeID')
     async DeleteAnimeFavourite(@Req() req: any, @Param('animeID') animeID: string) {
         try {
-            await this.favouriteService.DeleteAnimeFavourite(req.user.id, animeID);
+            await this.favouriteService.DeleteAnimeFavourite(req.user.id, animeID)
             const response: Record<string, any> = {
                 Message: "Delete successfully",
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
     @Get('getall')
     async GetAllFavourite(@Req() req: any, @Query() query: FindAnimeDTO) {
         try {
-            const result = await this.favouriteService.FindAllFavourite(req.user.id, query.page, query.limit);
+            const result = await this.favouriteService.FindAllFavourite(req.user.id, query.page, query.limit)
             const response: Record<string, any> = {
                 "data": {
                     "count": result.length,
@@ -49,9 +49,9 @@ export class FavouriteController {
                     })
                 }
             }
-            return result;
+            return result
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 }

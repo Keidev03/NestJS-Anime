@@ -1,7 +1,8 @@
 import * as stream from 'stream'
 import * as Jimp from "jimp"
 import { google } from "googleapis"
-import { resolve } from "path"
+
+import config from '../config'
 
 export class GoogleDriveService {
 
@@ -12,12 +13,9 @@ export class GoogleDriveService {
     }
 
     private initDrive() {
-        const keyFilePath = resolve('secret.json');
-        const scopes = ["https://www.googleapis.com/auth/drive"]
-
         const auth = new google.auth.GoogleAuth({
-            keyFile: keyFilePath,
-            scopes: scopes,
+            keyFile: config.env.keyFilePath,
+            scopes: config.env.scopes,
         });
         return google.drive({ version: "v3", auth: auth })
     }

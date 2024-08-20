@@ -1,0 +1,554 @@
+[
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47737"
+              },
+              "title": "Weathering with You",
+              "anotherName": [
+                     "Tenki no Ko",
+                     "天気の子"
+              ],
+              "description": "The summer of his high school freshman year, Hodaka runs away from his remote island home to Tokyo, and quickly finds himself pushed to his financial and personal limits. The weather is unusually gloomy and rainy every day, as if taking its cue from his life. After many days of solitude, he finally finds work as a freelance writer for a mysterious occult magazine. Then, one day, Hodaka meets Hina on a busy street corner. This bright and strong-willed girl possesses a strange and wonderful ability: the power to stop the rain and clear the sky.",
+              "genre": [
+                     1,
+                     5,
+                     6,
+                     9
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2019-08-29T17:00:00Z"
+              },
+              "imagePoster": "1KE1aer_xe5SQ8qXSBqkevlmDYYn--At-",
+              "imageBackground": "1Ssg7_aOyunKB2T4o7O31dym1n3oTJuGt",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:12:44.976Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47740"
+              },
+              "title": "Maquia: When the Promised Flower Blooms",
+              "anotherName": [
+                     "Sayonara no Asa ni Yakusoku no Hana o Kazarō",
+                     "さよならの朝に約束の花をかざろう",
+                     "Let's Decorate the Promised Flowers on the Morning of Goodbye"
+              ],
+              "description": "Maquia is a member of a special race called the Iorph who can live for hundreds of years. However, Maquia has always felt lonely despite being surrounded by her people, as she was orphaned from a young age. She daydreams about the outside world, but dares not travel from her home due to the warnings of the clan's chief. One day the kingdom of Mezarte invades her homeland. They already have what is left of the giant dragons, the Renato, under their control, and now their king wishes to add the immortality to his bloodline. They ravage the Iorph homeland and kill most of its inhabitants. Caught in the midst of the attack, Maquia is carried off by one of the Renato. It soon dies, and she is left deserted in a forest, now truly alone save for the cries of a single baby off in the distance. Maquia finds the baby in a destroyed village and decides to raise him as her own, naming him Ariel. Although she knows nothing of the human world, how to raise a child that ages much faster than her.",
+              "genre": [
+                     1,
+                     6,
+                     5,
+                     3
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2018-02-23T17:00:00Z"
+              },
+              "imagePoster": "102NEdmcZNbZzN7zyC-BOX4xae1PpMVc7",
+              "imageBackground": "1crVJmDNem4qGLaxtNA9k8KaaUKDr-bYP",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:24:51.172Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47743"
+              },
+              "title": "Suzume",
+              "anotherName": [
+                     "Suzume no Tojimari",
+                     "すずめの戸締まり",
+                     "Suzume's Locking Up"
+              ],
+              "description": "Suzume, 17, lost her mother as a little girl. On her way to school, she meets a mysterious young man. But her curiosity unleashes a calamity that endangers the entire population of Japan, and so Suzume embarks on a journey to set things right.",
+              "genre": [
+                     1,
+                     6,
+                     5,
+                     3
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2023-03-09T17:00:00Z"
+              },
+              "imagePoster": "1Km9ukPScFsyLHFXF6aJHGvducSsiHpC0",
+              "imageBackground": "1SeSSN1CGBNUdXO2AMHFGj_0cdcaGIPLi",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:52:17.453Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47741"
+              },
+              "title": "Violet Evergarden: The Movie",
+              "anotherName": [
+                     "Gekijōban Vaioretto Evāgāden",
+                     "劇場版 ヴァイオレット・エヴァーガーデン"
+              ],
+              "description": "As the world moves on from the war and technological advances bring changes to her life, Violet still hopes to see her lost commanding officer again.",
+              "genre": [
+                     1,
+                     6,
+                     5,
+                     9
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2020-09-17T17:00:00Z"
+              },
+              "imagePoster": "1KmWoX0T-yB_qiKwnKgrUr9VtpjoD-ga4",
+              "imageBackground": "1nZK0cMHS2hf1O7M3M4X2z4IXil8yURNP",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:29:24.77Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47744"
+              },
+              "title": "To Me, the One Who Loved You",
+              "anotherName": [
+                     "君を愛したひとりの僕へ",
+                     "Kimi wo Aishita Hitori no Boku e"
+              ],
+              "description": "Koyomi Hidaka and Shiori Sato meet at his father’s research center and begin to fall in love, but so do their parents, who eventually marry. To avoid becoming stepsiblings, they decide to run away to a parallel universe. Traveling between dimensions is common in their world, but not without repercussions. Does a universe exist for the young couple, and what will it cost them to find it?",
+              "genre": [
+                     1,
+                     9,
+                     25
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2022-10-06T17:00:00Z"
+              },
+              "imagePoster": "18dMiYsrl6VpmW3rNA9zNqsjeLUIjA0t7",
+              "imageBackground": "1LWGBkLjIbWViWP2zCz8CbRUlQH8KeQjv",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-04T04:52:22.412Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47745"
+              },
+              "title": "To Every You I've Loved Before",
+              "anotherName": [
+                     "僕が愛したすべての君へ",
+                     "Boku ga Aishita Subete no Kimi e"
+              ],
+              "description": "While struggling to make friends after his parents’ divorce, Koyomi Takasaki meets Kazune Takigawa, but apparently, they already have. Kazune reveals that she’s from World Line 85, an alternate universe in which she and Koyomi are lovers. But in a reality where moving between dimensions is natural, could Koyomi be the one from another world?",
+              "genre": [
+                     1,
+                     9,
+                     25
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2022-10-06T17:00:00Z"
+              },
+              "imagePoster": "1HqPL62Cs0bZV7dV34CfM4VCBJ_WizGHg",
+              "imageBackground": "1pXmuDV7g2hT1pRWAPIh7XEg4tsUfFkqf",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-04T04:54:34.505Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47746"
+              },
+              "title": "The Tunnel to Summer, the Exit of Goodbyes",
+              "anotherName": [
+                     "夏へのトンネル、さよならの出口",
+                     "Natsu e no Tonneru, Sayonara no Deguchi"
+              ],
+              "description": "Urashima Tunnel – Once you enter that tunnel, you can get whatever you want, but at a price. Kaoru Tohno, who seems to have an elusive personality and traumatic past, and Anzu Hanashiro, who is struggling to reconcile her ideal image and true-to-heart attitude, team up to investigate the Urashima Tunnel and get what they want. This is an unforgettable summer story of nostalgia and sprinting in a remote countryside.",
+              "genre": [
+                     1,
+                     5,
+                     9,
+                     7
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2023-01-11T17:00:00Z"
+              },
+              "imagePoster": "16M1pPcZrMnLZADsIf7Pwk_3CLYOBIaDE",
+              "imageBackground": "19-7PUdlOSnA43X9OnO5um0Qa_9jG6Ua7",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-04T05:02:07.106Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47734"
+              },
+              "title": "Spirited Away",
+              "anotherName": [
+                     "Sen to Chihiro no Kamikakushi",
+                     "千と千尋の神隠し"
+              ],
+              "description": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+              "genre": [
+                     1,
+                     23,
+                     6
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2001-07-19T17:00:00Z"
+              },
+              "imagePoster": "1GlrRLIjSoGWCksQg1mUnkqAt9_7DwsMW",
+              "imageBackground": "19adm75E9OFPLa5khw_4xKZTFhsIYeIbL",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T04:56:09.917Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47747"
+              },
+              "title": "Summer Ghost ",
+              "anotherName": [
+                     "サマーゴースト",
+                     "Samā Gōsuto"
+              ],
+              "description": "Urashima Tunnel – Once you enter that tunnel, you can get whatever you want, but at a price. Kaoru Tohno, who seems to have an elusive personality and traumatic past, and Anzu Hanashiro, who is struggling to reconcile her ideal image and true-to-heart attitude, team up to investigate the Urashima Tunnel and get what they want. This is an unforgettable summer story of nostalgia and sprinting in a remote countryside.",
+              "genre": [
+                     1,
+                     5,
+                     8,
+                     6
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2021-11-12T00:00:00Z"
+              },
+              "imagePoster": "1v8JApQxzbW29fQhAMM-u64BmK_RkGHd-",
+              "imageBackground": "1__346PnbvIXXrLzer2wZXz5XNCFFfEeU",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-04T05:06:19.779Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47748"
+              },
+              "title": "Hello World",
+              "anotherName": [
+                     "ハロー・ワールド"
+              ],
+              "description": "A shy high schooler in Kyoto meets a man claiming to be his future self, who tells him he’s hacked into the past to save their first love.",
+              "genre": [
+                     1,
+                     9,
+                     25
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2019-09-19T17:00:00Z"
+              },
+              "imagePoster": "1mRBymhEP4J1AdaYxLD4mjXjpotDFlV5z",
+              "imageBackground": "1isf7a3NdF6ErxaQYILYJP2dUQn_ZhT8L",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-04T05:16:31.597Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47749"
+              },
+              "title": "SPY x FAMILY",
+              "anotherName": [
+                     "(スパイファミリー Supai Famirī"
+              ],
+              "description": "World peace is at stake and secret agent Twilight must undergo his most difficult mission yet—pretend to be a family man. Posing as a loving husband and father, he'll infiltrate an elite school to get close to a high-profile politician. He has the perfect cover, except his wife's a deadly assassin and neither knows each other's identity. But someone does: his adopted daughter, who's a telepath!",
+              "genre": [
+                     1,
+                     2,
+                     3
+              ],
+              "type": 2,
+              "releaseDate": {
+                     "$date": "2022-04-09T00:00:00Z"
+              },
+              "imagePoster": "1DntOkZBOqrHCNS2bnPsNwCINta3HgB4Y",
+              "imageBackground": "1VoffSil4-R_8umgmqsUecGy40fhGJ0bx",
+              "totalEpisode": 25,
+              "createdAt": {
+                     "$date": "2024-08-04T08:33:50.088Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47750"
+              },
+              "title": "Alya Sometimes Hides Her Feelings in Russian",
+              "anotherName": [
+                     "時々ボソッとロシア語でデレる隣のアーリャさん",
+                     "Tokidoki Bosotto Roshiago de Dereru Tonari no Ārya-san",
+                     "Иногда Аля внезапно кокетничает по-русски"
+              ],
+              "description": "Alya is a transfer student enjoying popularity at her new high school, often sporting a cold shoulder while earning high marks in class. She ignores her nerdy classmate, Kuze Masachika, except for when she blurts out a flirtatious line to him in Russian. Little does she know, Kuze understands Russian, though he pretends not to. Let’s see where this wacky love story takes them!",
+              "genre": [
+                     1,
+                     4
+              ],
+              "type": 2,
+              "releaseDate": {
+                     "$date": "2024-01-01T00:00:00Z"
+              },
+              "imagePoster": "1eZYTRcoA4PRpP4Xbini1nBuE27Nq2ys2",
+              "imageBackground": "16atLMvVUEqbZGaMUXBlE3NJFA_Q1DWqO",
+              "totalEpisode": 12,
+              "createdAt": {
+                     "$date": "2024-08-05T04:28:01.496Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47735"
+              },
+              "title": "Your Name",
+              "anotherName": [
+                     "Kimi no Na wa",
+                     "君の名は"
+              ],
+              "description": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other.",
+              "genre": [
+                     1,
+                     9,
+                     5
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2017-01-13T00:00:00Z"
+              },
+              "imagePoster": "1nL3gQ1Xxy2u0iSekoes5wHE7nVDjNGCs",
+              "imageBackground": "1-wRxjDsyYYtq5ftbDW6zYpz3ATgJO9Gc",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:00:25.975Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47736"
+              },
+              "title": "A Silent Voice",
+              "anotherName": [
+                     "Eiga Koe no Katachi",
+                     "映画 聲の形"
+              ],
+              "description": "Shouya Ishida starts bullying the new girl in class, Shouko Nishimiya, because she is deaf. But as the teasing continues, the rest of the class starts to turn on Shouya for his lack of compassion. When they leave elementary school, Shouko and Shouya do not speak to each other again... until an older, wiser Shouya, tormented by his past behaviour, decides he must see Shouko once more. He wants to atone for his sins, but is it already too late...?",
+              "genre": [
+                     1,
+                     5
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2017-05-11T17:00:00Z"
+              },
+              "imagePoster": "15nSVPxNnVzjJrSHcWtN5Rsu6hgryRldq",
+              "imageBackground": "1WtuzO9-qC6uqiKq8s8F66yZcS6PbkmaH",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:03:12.826Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47738"
+              },
+              "title": "I Want to Eat Your Pancreas",
+              "anotherName": [
+                     "Kimi no Suizō o Tabetai",
+                     "君の膵臓をたべたい"
+              ],
+              "description": "After his classmate and crush is diagnosed with a pancreatic disease, an average high schooler sets out to make the most of her final days.",
+              "genre": [
+                     1,
+                     5,
+                     9
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2019-01-24T17:00:00Z"
+              },
+              "imagePoster": "1kz6CFEFyN6k26wmrRfA9R8_fmbDiATPm",
+              "imageBackground": "10cJSUvniCRhlXz0hngkOId1aTNM3Uxu4",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:17:08.024Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47739"
+              },
+              "title": "Hotarubi no Mori e",
+              "anotherName": [
+                     "Into the Forest of Fireflies Light",
+                     "蛍火の杜へ"
+              ],
+              "description": "One hot summer day a little girl gets lost in an enchanted forest of the mountain god where spirits reside. A young boy appears before her, but she cannot touch him for fear of making him disappear. And so a wondrous adventure awaits...",
+              "genre": [
+                     1,
+                     6,
+                     9
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2011-09-16T17:00:00Z"
+              },
+              "imagePoster": "1Y5cvmotOx5J4vrcS62BQ28RZ1kPTqKMf",
+              "imageBackground": "1IrvS96cgXm6addekGSYZoT_1jPNJ5Stx",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:20:49.712Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47742"
+              },
+              "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
+              "anotherName": [
+                     "Vaioretto Evāgāden Gaiden: Eien to Jidō Shuki Ningyō",
+                     "ヴァイオレット・エヴァーガーデン 外伝 永遠と自動手記人形\n"
+              ],
+              "description": "Isabella, the daughter of the noble York family, is enrolled in an all-girls academy to be groomed into a dame worthy of nobility. However, she has given up on her future, seeing the prestigious school as nothing more than a prison from the outside world. Her family notices her struggling in her lessons and decides to hire Violet Evergarden to personally tutor her under the guise of a handmaiden. At first, Isabella treats Violet coldly. Violet seems to be able to do everything perfectly, leading Isabella to assume that she was born with a silver spoon. After some time, Isabella begins to realize that Violet has had her own struggles and starts to open up to her. Isabella soon reveals that she has lost contact with her beloved younger sister, whom she yearns to see again. Having experienced the power of words through her past clientele, Violet asks if Isabella wishes to write a letter to Taylor. Will Violet be able to help Isabella convey her feelings to her long-lost sister?",
+              "genre": [
+                     1,
+                     6,
+                     5
+              ],
+              "type": 1,
+              "releaseDate": {
+                     "$date": "2019-01-10T17:00:00Z"
+              },
+              "imagePoster": "1SbbNlf9Pf2QhCn6E7Cxa_NnXh26x_8Ic",
+              "imageBackground": "1DOAMzkzvI9Pp7MbTLguG44rMa57aAaJM",
+              "totalEpisode": 1,
+              "createdAt": {
+                     "$date": "2024-08-03T05:32:30.112Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47751"
+              },
+              "title": "Frieren: Beyond Journey's End",
+              "anotherName": [
+                     "葬送のフリーレン",
+                     "Sōsō no Furīren",
+                     "Frieren at the Funera",
+                     "Frieren the Slayer"
+              ],
+              "description": "After the party of heroes defeated the Demon King, they restored peace to the land and returned to lives of solitude. Generations pass, and the elven mage Frieren comes face to face with humanity’s mortality. She takes on a new apprentice and promises to fulfill old friends’ dying wishes. Can an elven mind make peace with the nature of life and death? Frieren embarks on her quest to find out.",
+              "genre": [
+                     1,
+                     5,
+                     2,
+                     3,
+                     6,
+                     25
+              ],
+              "type": 2,
+              "releaseDate": {
+                     "$date": "2023-10-28T17:00:00Z"
+              },
+              "imagePoster": "11f89b9CGNqyiZS0FtWeUbSfg5LkJGX3n",
+              "imageBackground": "17rpYXr0QzruyIWgdH3Y5rweE9zMqo0xo",
+              "totalEpisode": 28,
+              "createdAt": {
+                     "$date": "2024-08-06T04:20:50.675Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47752"
+              },
+              "title": "The Apothecary Diaries",
+              "anotherName": [
+                     "薬屋のひとりごと",
+                     "Kusuriya no Hitorigoto",
+                     "Apothecary's Soliloquy"
+              ],
+              "description": "Maomao lived a peaceful life with her apothecary father. Until one day, she's sold as a lowly servant to the emperor's palace. But she wasn't meant for a compliant life among royalty. So when imperial heirs fall ill, she decides to step in and find a cure! This catches the eye of Jinshi, a handsome palace official who promotes her. Now, she's making a name for herself solving medical mysteries!",
+              "genre": [
+                     1,
+                     5,
+                     8
+              ],
+              "type": 2,
+              "releaseDate": {
+                     "$date": "2023-10-21T17:00:00Z"
+              },
+              "imagePoster": "1ngUwqOEc8M0T2aVhgc_vB05ebpZ7j30E",
+              "imageBackground": "1qAwptuSZj0IePE-rixT7OxWs7Bep5NTe",
+              "totalEpisode": 24,
+              "createdAt": {
+                     "$date": "2024-08-06T04:44:52.368Z"
+              },
+              "__v": 0
+       },
+       {
+              "_id": {
+                     "$oid": "66af81279c9dda8ee8c47753"
+              },
+              "title": "Flying Witch",
+              "anotherName": [
+                     " ふらいんぐうぃっち",
+                     "Furaingu Witchi"
+              ],
+              "description": "Makoto Kowata is a little flighty, in multiple ways. With no sense of direction, but the ability to fly on a broom, this witch-in-training has a lot to learn; about magic, her relatives, and the world around her.",
+              "genre": [
+                     1,
+                     6,
+                     4,
+                     25
+              ],
+              "type": 2,
+              "releaseDate": {
+                     "$date": "2016-06-25T17:00:00Z"
+              },
+              "imagePoster": "1zwLVDAisbmAnrbn62PgTXBw4o0ocKuc8",
+              "imageBackground": "1Q_zpTSwLm4iAl71iVzKvY1TfYufVvotP",
+              "createdAt": {
+                     "$date": "2024-08-12T03:06:08.341Z"
+              },
+              "totalEpisode": 12,
+              "__v": 0
+       }
+]

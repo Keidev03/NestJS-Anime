@@ -4,18 +4,19 @@ import { Model } from 'mongoose'
 
 import { IAnime, ResultFindAllAnime } from './anime.schema'
 import { CreateAnimeDTO, UpdateAnimeDTO } from './dto'
-import { GenresService } from '../genres/genres.service'
+import { GenreService } from '../genre/genre.service'
 import { GoogleDriveService } from '../../service/drive.service'
 import { TypeService } from '../type/type.service'
 import { ConvertDateService } from '../../service/date.service'
+import config from '../../config'
 
 @Injectable()
 export class AnimeService {
 
     private readonly idFolder: string;
 
-    constructor(@InjectModel('Anime') private readonly animeModel: Model<IAnime>, private readonly driveService: GoogleDriveService, private readonly genresService: GenresService, private readonly typeService: TypeService, private readonly convertDateService: ConvertDateService) {
-        this.idFolder = process.env.FOLDER;
+    constructor(@InjectModel('Anime') private readonly animeModel: Model<IAnime>, private readonly driveService: GoogleDriveService, private readonly genreService: GenreService, private readonly typeService: TypeService, private readonly convertDateService: ConvertDateService) {
+        this.idFolder = config.env.idFolder;
     }
 
     public CheckAnime = async (id: string): Promise<boolean> => {
@@ -32,10 +33,10 @@ export class AnimeService {
 
     async CreateAnime(dataCreate: CreateAnimeDTO, imagePoster?: any, imageBackgound?: any): Promise<IAnime> {
         try {
-            const arrayGenres = dataCreate.genres;
-            const checkGenres = await this.genresService.CheckGenresById(arrayGenres)
-            if (!checkGenres) {
-                throw new NotFoundException('Genres not found')
+            const arrayGenre = dataCreate.genre;
+            const checkGenre = await this.genreService.CheckGenreById(arrayGenre)
+            if (!checkGenre) {
+                throw new NotFoundException('Genre not found')
             }
             const checkType = await this.typeService.CheckType(dataCreate.type)
             if (!checkType) {
@@ -52,7 +53,7 @@ export class AnimeService {
                 title: dataCreate.title,
                 anotherName: dataCreate.anotherName,
                 description: dataCreate.description,
-                genres: dataCreate.genres,
+                genre: dataCreate.genre,
                 totalEpisode: dataCreate.totalEpisode,
                 type: dataCreate.type,
                 releaseDate: date,
@@ -107,18 +108,18 @@ export class AnimeService {
         }
     }
 
-    async FindAllAnime(genres?: string[], type?: string, page: number = 1, limit: number = 20): Promise<ResultFindAllAnime> {
+    async FindAllAnime(genre?: string[], type?: string, page: number = 1, limit: number = 20): Promise<ResultFindAllAnime> {
         try {
             page = Math.max(1, page)
             limit = Math.min(30, Math.max(1, limit))
             const filter: any = {}
-            genres && (filter.genres = { $in: genres })
+            genre && (filter.genre = { $in: genre })
             type && (filter.type = type)
             const totalRecords = await this.animeModel.countDocuments()
             const totalPages = Math.ceil(totalRecords / limit)
             const movies = await this.animeModel
                 .find(filter)
-                .populate({ path: 'genres', select: 'name -_id' })
+                .populate({ path: 'genre', select: 'name -_id' })
                 .populate({ path: 'type', select: 'name -_id' })
                 .skip((page - 1) * limit)
                 .limit(limit)
@@ -144,7 +145,7 @@ export class AnimeService {
         try {
             const movie = await this.animeModel
                 .findById(id)
-                .populate({ path: 'genres', select: 'name -_id' })
+                .populate({ path: 'genre', select: 'name -_id' })
                 .populate({ path: 'type', select: 'name -_id' })
             if (!movie) {
                 throw new NotFoundException("Movie not found")
@@ -155,12 +156,12 @@ export class AnimeService {
         }
     }
 
-    async SearchAnime(keyword: string, genres?: string[], type?: string, page: number = 1, limit: number = 20): Promise<IAnime[]> {
+    async SearchAnime(keyword: string, genre?: string[], type?: string, page: number = 1, limit: number = 20): Promise<IAnime[]> {
         try {
             page = Math.max(1, page)
             limit = Math.min(30, Math.max(1, limit))
             const filter: any = {}
-            genres && genres.length > 0 && (filter.genres = { $in: genres })
+            genre && genre.length > 0 && (filter.genre = { $in: genre })
             type && (filter.type = type)
             const adjustedKeyword = keyword.split('').join('\\s*')
             const searchCondition = {

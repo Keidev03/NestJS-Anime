@@ -15,6 +15,6 @@ export class CounterService {
             { $inc: { sequence_value: 1 } },
             { new: true, upsert: true }
         );
-        return sequenceDocument.sequence_value;
+        return sequenceDocument.sequence_value
     }
 }

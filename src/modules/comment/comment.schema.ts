@@ -13,11 +13,11 @@ export interface IComment {
 
 export const CommentSchema = new mongoose.Schema({
     userID: { type: mongoose.Types.ObjectId, require: true },
-    animeID: { type: mongoose.Types.ObjectId, require: true },
+    animeID: { type: mongoose.Types.ObjectId, ref: 'Anime', require: true },
     comment: { type: String, require: true },
     like: [{ type: mongoose.Types.ObjectId }],
     dislike: [{ type: mongoose.Types.ObjectId }],
     commentTimeEdit: { type: Date, default: Date.now },
     createAt: { type: Date, default: Date.now },
 })
-CommentSchema.index({ userID: 1, animeID: 1, commentTime: 1 });
+CommentSchema.index({ userID: 1, animeID: 1, commentTime: 1 })

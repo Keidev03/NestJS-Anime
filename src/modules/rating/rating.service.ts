@@ -23,19 +23,19 @@ export class RatingService {
                 const dataInsert = new this.ratingModel({
                     animeID: animeID,
                     rating: [{ userID: userID, point: rating }]
-                });
-                const result = await dataInsert.save();
-                return result;
+                })
+                const result = await dataInsert.save()
+                return result
             } else {
-                const userRating = checkRating.rating.find(r => r.userID === userID);
+                const userRating = checkRating.rating.find(r => r.userID === userID)
                 if (userRating) {
-                    userRating.point = rating;
+                    userRating.point = rating
                 } else {
                     // Nếu chưa tồn tại, thêm mới vào mảng rating
-                    checkRating.rating.push({ userID: userID, point: rating });
+                    checkRating.rating.push({ userID: userID, point: rating })
                 }
-                const result = await checkRating.save();
-                return result;
+                const result = await checkRating.save()
+                return result
             }
         } catch (error) {
             throw error
@@ -44,11 +44,11 @@ export class RatingService {
 
     async DeleteRating(userID: string, animeID: string): Promise<IRating> {
         try {
-            const ratingRecord = await this.ratingModel.findOne({ animeID: animeID });
-            if (!ratingRecord) throw new NotFoundException('The record table does not exist');
+            const ratingRecord = await this.ratingModel.findOne({ animeID: animeID })
+            if (!ratingRecord) throw new NotFoundException('The record table does not exist')
 
-            const userRatingExists = ratingRecord.rating.some(rating => rating.userID === userID);
-            if (!userRatingExists) throw new NotFoundException('UserID does not exist in the rating array');
+            const userRatingExists = ratingRecord.rating.some(rating => rating.userID === userID)
+            if (!userRatingExists) throw new NotFoundException('UserID does not exist in the rating array')
 
             const result = await this.ratingModel.findOneAndUpdate(
                 { animeID: animeID },
@@ -56,7 +56,7 @@ export class RatingService {
                 { new: true }
             );
 
-            return result;
+            return result
         } catch (error) {
             throw error
         }
@@ -64,10 +64,10 @@ export class RatingService {
 
     async FindAllRatingAnime(animeID: string): Promise<any> {
         try {
-            const checkAnime = await this.animeService.CheckAnime(animeID);
+            const checkAnime = await this.animeService.CheckAnime(animeID)
             if (!checkAnime) throw new Error("Anime not found");
 
-            const ratingRecord = await this.ratingModel.findOne({ animeID: animeID });
+            const ratingRecord = await this.ratingModel.findOne({ animeID: animeID })
 
             if (!ratingRecord || ratingRecord.rating.length === 0) {
                 return {
@@ -76,15 +76,15 @@ export class RatingService {
                 };
             }
 
-            const totalRating = ratingRecord.rating.reduce((sum, userRating) => sum + userRating.point, 0);
-            const averageRating = totalRating / ratingRecord.rating.length;
+            const totalRating = ratingRecord.rating.reduce((sum, userRating) => sum + userRating.point, 0)
+            const averageRating = totalRating / ratingRecord.rating.length
 
             return {
                 averageRating,
                 count: ratingRecord.rating.length,
             };
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 }

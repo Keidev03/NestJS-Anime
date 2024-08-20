@@ -67,7 +67,7 @@ export class EpisodeService {
             const validDataInsert = filteredDataInsert.filter(item => item !== null) as CreateEpisodeDTO[]
 
             for (let i = 0; i < validDataInsert.length; i++) {
-                const date: any = await this.convertDateService.DateToISO(validDataInsert[i].releaseDate);
+                const date: any = await this.convertDateService.DateToISO(validDataInsert[i].releaseDate)
                 if (date) {
                     validDataInsert[i].releaseDate = date;
                 }

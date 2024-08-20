@@ -5,12 +5,12 @@ import { MongooseModule } from '@nestjs/mongoose'
 
 import { AnimeSchema } from './anime.schema'
 import { GoogleDriveService } from '../../service/drive.service'
-import { GenresModule } from '../genres/genres.module'
+import { GenreModule } from '../genre/genre.module'
 import { TypeModule } from '../type/type.module'
 import { ConvertDateService } from '../../service/date.service'
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: 'Anime', schema: AnimeSchema }]), GenresModule, TypeModule],
+  imports: [MongooseModule.forFeature([{ name: 'Anime', schema: AnimeSchema }]), GenreModule, TypeModule],
   controllers: [AnimeController],
   providers: [AnimeService, GoogleDriveService, ConvertDateService],
   exports: [AnimeService]

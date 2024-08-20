@@ -1,24 +1,24 @@
 import { Body, Controller, Delete, Get, NotFoundException, Param, Post, UseGuards } from '@nestjs/common'
 
-import { TypeService } from './type.service'
+import { GenreService } from './genre.service'
 import { AuthGuard } from '../../guards/auth.guard'
 import { AdminGuard } from '../../guards/admin.guard'
 
-@Controller('type')
+@Controller('genre')
 @UseGuards(AuthGuard, AdminGuard)
-export class TypeController {
+export class GenreController {
 
-    constructor(private readonly TypeService: TypeService) { }
+    constructor(private readonly genreService: GenreService) { }
 
     @Post('create')
-    async PostType(@Body('type') type: string) {
+    async PostGenre(@Body('genre') genre: string) {
         try {
-            if (!type) {
-                throw new NotFoundException('No Type entered')
+            if (!genre) {
+                throw new NotFoundException('No genre entered')
             }
-            const result = await this.TypeService.CreateType(type)
+            const result = await this.genreService.CreateGenre(genre)
             const response: Record<string, any> = {
-                Message: `Create Type ${result.name} successfully`,
+                Message: `Create genre ${result.name} successfully`,
             }
             return response
         } catch (error) {
@@ -27,9 +27,9 @@ export class TypeController {
     }
 
     @Delete('delete/:id')
-    async DeleteType(@Param('id') id: string) {
+    async DeleteGenre(@Param('id') id: string) {
         try {
-            await this.TypeService.DeleteType(id)
+            await this.genreService.DeleteGenre(id)
             const response: Record<string, any> = {
                 Message: 'Delete successfully',
             }
@@ -40,16 +40,16 @@ export class TypeController {
     }
 
     @Get('getall')
-    async GetAllType() {
+    async GetAllGenre() {
         try {
-            const Type: any = await this.TypeService.FindAllType()
+            const genre: any = await this.genreService.FindAllGenre();
             const response: Record<string, any> = {
                 "data": {
-                    "count": Type.length,
-                    "items": Type.map(Type => {
+                    "count": genre.length,
+                    "items": genre.map(genre => {
                         return {
-                            id: Type.id,
-                            type: Type.name
+                            id: genre.id,
+                            category: genre.name
                         }
                     })
                 }

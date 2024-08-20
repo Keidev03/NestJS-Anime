@@ -1,9 +1,9 @@
-import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common'
+import { InjectModel } from '@nestjs/mongoose'
+import { Model } from 'mongoose'
 
-import { IType } from './type.schema';
-import { CounterService } from '../counter/counter.service';
+import { IType } from './type.schema'
+import { CounterService } from '../counter/counter.service'
 
 @Injectable()
 export class TypeService {

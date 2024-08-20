@@ -1,4 +1,4 @@
-import * as csv from 'csvtojson';
+import * as csv from 'csvtojson'
 
 export class ConvertCSVService {
 

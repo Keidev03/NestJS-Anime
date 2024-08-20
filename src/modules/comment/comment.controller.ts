@@ -12,13 +12,13 @@ export class CommentController {
     @Post('create/:animeID')
     async PostComment(@Req() req: any, @Param('animeID') animeID: string, @Body('comment') comment: string) {
         try {
-            await this.commentService.CreateComment(req.user.id, animeID, comment);
+            await this.commentService.CreateComment(req.user.id, animeID, comment)
             const response: Record<string, any> = {
                 Message: "Create successfully",
             }
             return response;
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
@@ -30,9 +30,9 @@ export class CommentController {
             const response: Record<string, any> = {
                 Message: "Update successfully",
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
@@ -52,16 +52,16 @@ export class CommentController {
                     })
                 }
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
     @UseGuards(AuthGuard)
     @Get('user')
     async GetCommentUser(@Req() req: any) {
         try {
-            const results: any = await this.commentService.FindCommentUser(req.user.id);
+            const results: any = await this.commentService.FindCommentUser(req.user.id)
             const response: Record<string, any> = {
                 "data": {
                     "count": results.length,
@@ -74,9 +74,9 @@ export class CommentController {
                     })
                 }
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 }

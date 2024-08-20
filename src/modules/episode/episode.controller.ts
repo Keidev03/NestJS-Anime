@@ -12,63 +12,63 @@ export class EpisodeController {
     constructor(private readonly episodeService: EpisodeService) { }
 
     @Post('create')
-    // @UseGuards(AuthGuard, AdminGuard)
+    @UseGuards(AuthGuard, AdminGuard)
     async PostEpisode(@Body() data: CreateEpisodeDTO) {
         try {
-            await this.episodeService.CreateEpisode(data);
+            await this.episodeService.CreateEpisode(data)
             const response: Record<string, any> = {
                 Message: "Create episode successfully",
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
     @Post('csv')
-    // @UseGuards(AuthGuard, AdminGuard)
+    @UseGuards(AuthGuard, AdminGuard)
     @UseInterceptors(FileInterceptor('csv'))
     async PostEpisodeCSV(@UploadedFile() file: Express.Multer.File) {
         try {
             const result = await this.episodeService.CreateManyEpisode(file);
-            return result;
+            return result
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
     @Patch('update/:id')
-    // @UseGuards(AuthGuard, AdminGuard)
+    @UseGuards(AuthGuard, AdminGuard)
     async UpdateEpisode(@Param('id') id: string, @Body() data: UpdateEpisodeDTO) {
         try {
-            await this.episodeService.UpdateEpisode(id, data);
+            await this.episodeService.UpdateEpisode(id, data)
             const response: Record<string, any> = {
                 Message: 'Update successfully',
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
     @Delete('delete/:id')
-    // @UseGuards(AuthGuard, AdminGuard)
+    @UseGuards(AuthGuard, AdminGuard)
     async DeleteEpisode(@Param('id') id: string) {
         try {
             await this.episodeService.DeleteEpisode(id);
             const response: Record<string, any> = {
                 Message: 'Delete successfully',
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
     @Get('getall/:id')
     async GetAllEpisodeAnime(@Param('id') animeID: string) {
         try {
-            const episodes: any = await this.episodeService.FindAllEpisodeAnime(animeID);
+            const episodes: any = await this.episodeService.FindAllEpisodeAnime(animeID)
             const response: Record<string, any> = {
                 "data": {
                     "count": episodes.length,
@@ -85,9 +85,9 @@ export class EpisodeController {
                     })
                 }
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 

@@ -13,7 +13,7 @@ export interface IEpisode {
     server2: string,
     server3: string,
     server4: string,
-};
+}
 
 export const EpisodeSchema = new mongoose.Schema({
     animeID: { type: mongoose.Types.ObjectId, required: true, ref: 'Anime' },
@@ -25,6 +25,6 @@ export const EpisodeSchema = new mongoose.Schema({
     server2: { type: String },
     server3: { type: String },
     server4: { type: String },
-});
+})
 
-EpisodeSchema.index({ animeID: 1, episode: 1 });
+EpisodeSchema.index({ animeID: 1, episode: 1 })

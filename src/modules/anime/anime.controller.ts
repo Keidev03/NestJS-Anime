@@ -18,7 +18,7 @@ export class AnimeController {
     };
 
     @Post('create')
-    // @UseGuards(AuthGuard, AdminGuard)
+    @UseGuards(AuthGuard, AdminGuard)
     @HttpCode(HttpStatus.CREATED)
     @UseInterceptors(FileFieldsInterceptor([
         { name: 'poster', maxCount: 1 },
@@ -26,22 +26,20 @@ export class AnimeController {
     ]))
     async PostAnime(@Body() data: CreateAnimeDTO, @UploadedFiles() files: { poster: Express.Multer.File, background: Express.Multer.File }) {
         try {
-            let poster = null;
-            let background = null;
+            let poster = null
+            let background = null
             if (files?.poster) {
-                poster = files.poster[0];
+                poster = files.poster[0]
             }
             if (files?.background) {
-                background = files?.background[0];
+                background = files?.background[0]
             }
-            // Start on eviroment node
-            // const result: IAnime = await this.animeService.CreateAnime({ ...data }, poster, background);
-            const result: IAnime = await this.animeService.CreateAnime(data, poster, background);
+            const result: IAnime = await this.animeService.CreateAnime(data, poster, background)
             const response: Record<string, any> = {
                 Message: `Create Anime ${result.title} successfully`
             }
 
-            return response;
+            return response
         }
         catch (error) {
             throw error
@@ -49,7 +47,7 @@ export class AnimeController {
     }
 
     @Patch('update/:id')
-    // @UseGuards(AuthGuard, AdminGuard)
+    @UseGuards(AuthGuard, AdminGuard)
     @HttpCode(HttpStatus.ACCEPTED)
     @UseInterceptors(FileFieldsInterceptor([
         { name: 'poster', maxCount: 1 },
@@ -57,17 +55,17 @@ export class AnimeController {
     ]))
     async PatchAnime(@Param('id') id: string, @UploadedFiles() files: { poster?: Express.Multer.File[], background?: Express.Multer.File[] }, @Body() data?: UpdateAnimeDTO) {
         try {
-            let poster = null;
-            let background = null;
+            let poster = null
+            let background = null
             if (files?.poster) {
-                poster = files.poster[0];
+                poster = files.poster[0]
             }
             if (files?.background) {
-                background = files?.background[0];
+                background = files?.background[0]
             }
             // Start on eviroment node
-            // await this.animeService.UpdateAnime(id, {...data}, poster, background);
-            await this.animeService.UpdateAnime(id, data, poster, background);
+            // await this.animeService.UpdateAnime(id, {...data}, poster, background)
+            await this.animeService.UpdateAnime(id, data, poster, background)
             const response: Record<string, any> = {
                 Message: "Patch successfully"
             }
@@ -78,15 +76,15 @@ export class AnimeController {
     };
 
     @Delete('delete/:id')
-    // @UseGuards(AuthGuard, AdminGuard)
+    @UseGuards(AuthGuard, AdminGuard)
     @HttpCode(HttpStatus.ACCEPTED)
     async DeleteAnime(@Param('id') id: string) {
         try {
-            await this.animeService.DeleteAnime(id);
+            await this.animeService.DeleteAnime(id)
             const response: Record<string, any> = {
                 Message: "Delete successfully"
             }
-            return response;
+            return response
         } catch (error) {
             throw error
         }
@@ -99,10 +97,10 @@ export class AnimeController {
             const page = query.page
             const limit = query.limit
 
-            const genres = query.genres ? query.genres.split(',') : undefined
+            const genre = query.genre ? query.genre.split(',') : undefined
             const type = query.type || undefined
 
-            const result = await this.animeService.FindAllAnime(genres, type, page, limit);
+            const result = await this.animeService.FindAllAnime(genre, type, page, limit)
             const { movies, currentPage, totalPages, totalRecords } = result;
             const respone: Record<string, any> = {
                 "data": {
@@ -131,8 +129,8 @@ export class AnimeController {
     @HttpCode(HttpStatus.OK)
     async GetOneAnime(@Param('id') id: string) {
         try {
-            const result: IAnime = await this.animeService.FindOneAnime(id);
-            const allGenres: any = result.genres;
+            const result: IAnime = await this.animeService.FindOneAnime(id)
+            const allGenre: any = result.genre
 
             const response: Record<string, any> = {
                 "data": {
@@ -140,7 +138,7 @@ export class AnimeController {
                     title: result.title,
                     description: result.description,
                     anotherName: result.anotherName,
-                    genres: allGenres.map(genre => {
+                    genre: allGenre.map(genre => {
                         return genre.name
                     }),
                     totalEpisode: result.totalEpisode,
@@ -151,9 +149,9 @@ export class AnimeController {
                     imageBackground: `https://drive.google.com/thumbnail?id=${result.imageBackground}&sz=s1000`
                 }
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 
@@ -163,9 +161,9 @@ export class AnimeController {
             const page = query.page
             const limit = query.limit
             const keyword = query.keyword
-            const genres = query.genres ? query.genres.split(',') : undefined
+            const genre = query.genre ? query.genre.split(',') : undefined
             const type = query.type || undefined
-            const results = await this.animeService.SearchAnime(keyword, genres, type, page, limit);
+            const results = await this.animeService.SearchAnime(keyword, genre, type, page, limit);
             const response = {
                 "data": {
                     "count": results.length,
@@ -179,9 +177,9 @@ export class AnimeController {
                     })
                 }
             }
-            return response;
+            return response
         } catch (error) {
-            throw error;
+            throw error
         }
     }
 }

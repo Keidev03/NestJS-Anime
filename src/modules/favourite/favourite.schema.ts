@@ -13,4 +13,4 @@ export const FavouriteSchema = new mongoose.Schema({
     createAt: { type: Date, default: Date.now },
 })
 
-FavouriteSchema.index({ userID: 1 });
+FavouriteSchema.index({ userID: 1 })

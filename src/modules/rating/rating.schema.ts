@@ -16,7 +16,7 @@ export interface IRating {
 const UserRatingSchema = new mongoose.Schema({
     userID: { type: String, required: true },
     point: { type: Number, required: true }
-});
+})
 
 export const RatingSchema = new mongoose.Schema({
     animeID: { type: mongoose.Types.ObjectId, require: true },
@@ -24,4 +24,4 @@ export const RatingSchema = new mongoose.Schema({
     createAt: { type: Date, default: Date.now },
 })
 
-RatingSchema.index({ animeID: 1 });
+RatingSchema.index({ animeID: 1 })

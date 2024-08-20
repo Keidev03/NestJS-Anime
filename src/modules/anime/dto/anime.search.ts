@@ -16,7 +16,7 @@ export class SearchAnimeDTO {
 
      @IsOptional()
      @IsString()
-     genres: string;
+     genre: string;
 
      @IsOptional()
      @IsString()

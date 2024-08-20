@@ -12,7 +12,7 @@ export class FavouriteService {
     async AddAnimeFavourite(userID: string, animeID: Array<string>): Promise<IFavourite> {
         try {
             for (let ani of animeID) {
-                const checkAnime = await this.animeService.CheckAnime(ani);
+                const checkAnime = await this.animeService.CheckAnime(ani)
                 if (!checkAnime) throw new Error("Anime not found")
             }
 
@@ -39,7 +39,7 @@ export class FavouriteService {
 
     async DeleteAnimeFavourite(userID: string, animeID: string): Promise<IFavourite> {
         try {
-            const checkAnime = await this.animeService.CheckAnime(animeID);
+            const checkAnime = await this.animeService.CheckAnime(animeID)
             if (!checkAnime) throw new Error("Anime not found")
             const userFavourite = await this.favouriteModel.findOne({ userID: userID })
             if (!userFavourite) {
@@ -47,12 +47,12 @@ export class FavouriteService {
             }
             if (userFavourite.animeID.length === 0) {
                 const result = await userFavourite.deleteOne()
-                return result;
+                return result
             }
             if (!userFavourite.animeID.includes(animeID)) {
                 throw new NotFoundException('Anime does not exist in favorites list')
             }
-            const newArrayAnime = userFavourite.animeID.filter(value => value.toString() !== animeID);
+            const newArrayAnime = userFavourite.animeID.filter(value => value.toString() !== animeID)
             const result = await userFavourite.updateOne({ animeID: newArrayAnime })
             return result
         } catch (error) {
@@ -67,7 +67,7 @@ export class FavouriteService {
                 .populate({ path: 'animeID' })
                 .skip((page - 1) * limit)
                 .limit(limit)
-                .sort({ createAt: -1 });
+                .sort({ createAt: -1 })
             return result
         } catch (error) {
             throw error

@@ -12,7 +12,7 @@ export class FindAnimeDTO {
 
     @IsOptional()
     @IsString()
-    genres: string;
+    genre: string;
 
     @IsOptional()
     @IsString()

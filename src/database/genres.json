@@ -1,0 +1,127 @@
+[
+       {
+              "_id": 8,
+              "name": "Mystery",
+              "__v": 0
+       },
+       {
+              "_id": 3,
+              "name": "Adventure",
+              "__v": 0
+       },
+       {
+              "_id": 1,
+              "name": "Animation",
+              "__v": 0
+       },
+       {
+              "_id": 9,
+              "name": "Romance",
+              "__v": 0
+       },
+       {
+              "_id": 5,
+              "name": "Drama",
+              "__v": 0
+       },
+       {
+              "_id": 11,
+              "name": "Sports",
+              "__v": 0
+       },
+       {
+              "_id": 12,
+              "name": "Supernatural",
+              "__v": 0
+       },
+       {
+              "_id": 14,
+              "name": "Psychological",
+              "__v": 0
+       },
+       {
+              "_id": 13,
+              "name": "Thriller",
+              "__v": 0
+       },
+       {
+              "_id": 10,
+              "name": "Slice of Life",
+              "__v": 0
+       },
+       {
+              "_id": 4,
+              "name": "Comedy",
+              "__v": 0
+       },
+       {
+              "_id": 15,
+              "name": "Historical",
+              "__v": 0
+       },
+       {
+              "_id": 16,
+              "name": "Mecha",
+              "__v": 0
+       },
+       {
+              "_id": 17,
+              "name": "Isekai",
+              "__v": 0
+       },
+       {
+              "_id": 6,
+              "name": "Fantasy",
+              "__v": 0
+       },
+       {
+              "_id": 23,
+              "name": "Family",
+              "__v": 0
+       },
+       {
+              "_id": 24,
+              "name": "China Animation",
+              "__v": 0
+       },
+       {
+              "_id": 18,
+              "name": "Shonen",
+              "__v": 0
+       },
+       {
+              "_id": 2,
+              "name": "Action",
+              "__v": 0
+       },
+       {
+              "_id": 7,
+              "name": "Horror",
+              "__v": 0
+       },
+       {
+              "_id": 25,
+              "name": "Science Fiction",
+              "__v": 0
+       },
+       {
+              "_id": 20,
+              "name": "Seinen",
+              "__v": 0
+       },
+       {
+              "_id": 21,
+              "name": "Josei",
+              "__v": 0
+       },
+       {
+              "_id": 22,
+              "name": "Cyberpunk",
+              "__v": 0
+       },
+       {
+              "_id": 19,
+              "name": "Shojo",
+              "__v": 0
+       }
+]
